@@ -8,5 +8,5 @@ for parola in parole:
     else:
         occorrenze[parola] = 1
 print(f"Occorrenze nella frase \"{frase}\" sono:")
-for parola, conteggio in occorrenze.items():
-    print(f"{parola}: {conteggio}")
+for parola, occorrenza in occorrenze.items():
+    print(f"{parola}: {occorrenza}")
